@@ -17,9 +17,9 @@ If you want to draw textures, remember they are capsules full of gas, not
 a glass with water.
 
 ## Crafting
- - s = steel ingot
- - c = empty capsule
- - e = empty
+s = steel ingot
+c = empty capsule
+e = empty
 Empty Capsule:
 ```
  e s e
