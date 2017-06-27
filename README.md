@@ -44,6 +44,6 @@ Capsule filler:
 
 ## Licence
 Code: AGPL3 or later(which means this program is free software and you can
-modify/use/distrobute while you keep it under the same licence)
+modify/use/distribute while you keep it under the same licence)
 
 Textures: currently WTFPL
