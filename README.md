@@ -16,10 +16,12 @@ some real textures, it won't be usable till it doesn't have textures.
 If you want to draw textures, remember they are capsules full of gas, not
 a glass with water.
 
+Also I don't have any idea about its fuel/power source, I wanted to use mesecons but I think its silly to make it working just using a torch.
+
 ## Crafting
-s = steel ingot
-c = empty capsule
-e = empty
+ - s = steel ingot
+ - c = empty capsule
+ - e = empty
 Empty Capsule:
 ```
  e s e
