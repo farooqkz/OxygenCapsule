@@ -38,12 +38,12 @@ Oxygen Compressor:
 
 ## Usage
  - Craft an Empty Capsule and an Oxygen compressor.
- - Put the Empty Capsule in Capsule filler, after 10 seconds it will turn to
+ - Put the Empty Capsule in Oxygen Compressor, after 10 seconds it will turn to
    half capsule and after another 10 seconds, you will have a full Capsule.
- - Go deep underwater, each time you use it, it will increase your breath by
-   10\. you can use it twice, once it will convert to half capsule and another
+ - Dive deep underwater. each time you using it will increase your breath by
+   5 and you can use it twice, once it will convert to half capsule and another
    time to an empty one.
- - Return it to capsule filler for later usage.
+ - Return it to Oxygen compressor for later usage.
 
 ## Licence
 Code: AGPL3 or later(which means this program is free software and you can
