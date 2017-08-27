@@ -1,6 +1,6 @@
 --[[
 Oxygen Capsule mod for Minetest
-Copyright (C) 2017  Faroogh Karimi Zadeh(FarooghKZ) <farooghkz@opmbx.org>
+Copyright (C) 2017  Farooq Karimi Zadeh(FarooqKZ) <farooghkz@opmbx.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -25,8 +25,8 @@ local function init_oxygen_compressor(pos)
     local inv = meta:get_inventory()
     meta:set_string("formspec",
     "size[8,6]"..
-    "list[context;capsules;2,0;4,1]"..
-    "label[2,1;^ Empty or Half Capsules Here ^]]"..
+    "list[context;fuel;1,1;2,1]"..
+    "list[context;capsules;4,1;4,1]"..
     "list[current_player;main;0,2;8,4]"
     )
     meta:set_string("infotext", "Oxygen Compressor")

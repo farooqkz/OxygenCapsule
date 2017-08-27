@@ -1,6 +1,6 @@
 --[[
 Oxygen Capsule mod for Minetest
-Copyright (C) 2017  Faroogh Karimi Zadeh(FarooghKZ) <farooghkz@opmbx.org>
+Copyright (C) 2017  Farooq Karimi Zadeh(FarooqKZ) <farooghkz@opmbx.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -25,7 +25,7 @@ minetest.register_craft({
     }
 })
 minetest.register_craft({
-    output = "oxygencapsule:capsule_filler",
+    output = "oxygencapsule:oxygen_compressor",
     recipe = {
         {"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
         {"default:steel_ingot", "oxygencapsule:small_capsule_empty", "default:steel_ingot"},

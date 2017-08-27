@@ -1,6 +1,6 @@
 --[[ 
 Oxygen Capsule mod for Minetest
-Copyright (C) 2017  Faroogh Karimi Zadeh(FarooghKZ) <farooghkz@opmbx.org>
+Copyright (C) 2017  Farooq Karimi Zadeh(FarooqKZ) <farooghkz@opmbx.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -15,6 +15,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
+
 dofile(minetest.get_modpath("oxygencapsule") .. "/oxygen_compressor.lua")
 dofile(minetest.get_modpath("oxygencapsule") .. "/crafting.lua")
 minetest.register_craftitem("oxygencapsule:small_capsule_full", {
