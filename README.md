@@ -3,15 +3,15 @@ Oxygen Capsule
 When you want to go diving underwater, use these capsules to increase your
 breath up to 10.
 This mod currently contains a small capsule(in three state: empty, half and
-full)  and a Oxygen compressor, each full capsule can increase your breath to 10.
+full) and a Oxygen compressor. each full capsule can increase your breath to 10.
 
-I said *small* capsule because bigger one may be added later(how about a big
+I said *small* capsules because bigger ones would be added later(how about a big
 one attached to player?)
 
 ## It's not ready!
-It need textures(three for capsules and one or two for Oxygen compressor), my
-painting and drawing was never good, I draw something randomly but it needs
-some real textures, it won't be usable till it doesn't have textures.
+It need textures(three for capsules and one or two for Oxygen compressor). My
+painting and drawing was never good. I have drawn something randomly but it needs
+some real textures and it won't be really usable till it doesn't have textures.
 
 If you want to draw textures, remember they are capsules full of gas, not
 a glass with water.
@@ -22,6 +22,7 @@ Also I don't have any idea about its fuel/power source, I wanted to use mesecons
  - s = steel ingot
  - c = empty capsule
  - e = empty
+
 Empty Capsule:
 ```
  e s e
