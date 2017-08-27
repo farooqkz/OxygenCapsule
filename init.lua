@@ -15,36 +15,36 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
-dofile(minetest.get_modpath("oxygen_capsule") .. "/capsule_filler.lua")
-dofile(minetest.get_modpath("oxygen_capsule") .. "/crafting.lua")
-minetest.register_craftitem("oxygen_capsule:small_capsule_full", {
+dofile(minetest.get_modpath("oxygencapsule") .. "/oxygen_compressor.lua")
+dofile(minetest.get_modpath("oxygencapsule") .. "/crafting.lua")
+minetest.register_craftitem("oxygencapsule:small_capsule_full", {
     description = "Oxygen Capsule(full)",
-    inventory_image = "oxygen_capsule_small.png",
+    inventory_image = "oxygencapsule_small.png",
     stack_max = 1,
     on_use = function(itemstack, user, pointed_thing)
         if user:get_breath() < 10 then
             user:set_breath(user:get_breath() + 5)
-            itemstack:replace("oxygen_capsule:small_capsule_half")
+            itemstack:replace("oxygencapsule:small_capsule_half")
             return itemstack
         end
     end
 })
-minetest.register_craftitem("oxygen_capsule:small_capsule_half", {
+minetest.register_craftitem("oxygencapsule:small_capsule_half", {
     description = "Oxygen Capsule(half)",
-    inventory_image = "oxygen_capsule_small.png",
+    inventory_image = "oxygencapsule_small.png",
     stack_max = 1,
     on_use = function(itemstack, user, pointed_thing)
         if user:get_breath() < 10 then
             user:set_breath(user:get_breath() + 5)
-            itemstack:replace("oxygen_capsule:small_capsule_empty")
+            itemstack:replace("oxygencapsule:small_capsule_empty")
             return itemstack
         end
 
     end
 })
-minetest.register_craftitem("oxygen_capsule:small_capsule_empty", {
+minetest.register_craftitem("oxygencapsule:small_capsule_empty", {
     description = "Oxygen Capsule(empty)",
-    inventory_image = "oxygen_capsule_small.png",
+    inventory_image = "oxygencapsule_small.png",
     stack_max = 1
 })
 

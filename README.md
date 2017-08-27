@@ -3,13 +3,13 @@ Oxygen Capsule
 When you want to go diving underwater, use these capsules to increase your
 breath up to 10.
 This mod currently contains a small capsule(in three state: empty, half and
-full)  and a capsule filler, each full capsule can increase your breath to 10.
+full)  and a Oxygen compressor, each full capsule can increase your breath to 10.
 
 I said *small* capsule because bigger one may be added later(how about a big
 one attached to player?)
 
 ## It's not ready!
-It need textures(three for capsules and one or two for capsule filler), my
+It need textures(three for capsules and one or two for Oxygen compressor), my
 painting and drawing was never good, I draw something randomly but it needs
 some real textures, it won't be usable till it doesn't have textures.
 
@@ -28,7 +28,7 @@ Empty Capsule:
  s e s
  e s e
 ```
-Capsule filler:
+Oxygen Compressor:
 ```
  s s s
  s c s
@@ -36,7 +36,7 @@ Capsule filler:
 ```
 
 ## Usage
- - Craft an Empty Capsule and a Capsule filler.
+ - Craft an Empty Capsule and an Oxygen compressor.
  - Put the Empty Capsule in Capsule filler, after 10 seconds it will turn to
    half capsule and after another 10 seconds, you will have a full Capsule.
  - Go deep underwater, each time you use it, it will increase your breath by

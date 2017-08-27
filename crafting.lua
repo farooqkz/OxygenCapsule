@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -- ]]
 minetest.register_craft({
-    output = "oxygen_capsule:small_capsule_empty",
+    output = "oxygencapsule:small_capsule_empty",
     recipe = {
         {"", "default:steel_ingot", ""},
         {"default:steel_ingot", "", "default:steel_ingot"},
@@ -25,10 +25,10 @@ minetest.register_craft({
     }
 })
 minetest.register_craft({
-    output = "oxygen_capsule:capsule_filler",
+    output = "oxygencapsule:capsule_filler",
     recipe = {
         {"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-        {"default:steel_ingot", "oxygen_capsule:small_capsule_empty", "default:steel_ingot"},
+        {"default:steel_ingot", "oxygencapsule:small_capsule_empty", "default:steel_ingot"},
         {"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}
 
     }
