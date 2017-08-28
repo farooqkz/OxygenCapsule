@@ -16,8 +16,6 @@ some real textures and it won't be really usable till it doesn't have textures.
 If you want to draw textures, remember they are capsules full of gas, not
 a glass with water.
 
-Also I don't have any idea about its fuel/power source, I wanted to use mesecons but I think it's silly to make it working just using a torch. currently it works without any fuel/power.
-
 ## Crafting
  - s = steel ingot
  - c = empty capsule
@@ -38,9 +36,12 @@ Oxygen Compressor:
 
 ## Usage
  - Craft an Empty Capsule and an Oxygen compressor.
- - Put the Empty Capsule in Oxygen Compressor, after 10 seconds it will turn to
+ - Get some oil extracts(say 99)
+ - Put oil extracts in fuel slot of the compressor
+ - Put the Empty Capsule in Oxygen Compressor(in 2x2 slot which is for
+   capsules), after 10 seconds it will turn to
    half capsule and after another 10 seconds, you will have a full Capsule.
- - Dive deep underwater. each time you using it will increase your breath by
+ - Dive deep underwater. each time using it will increase your breath by
    5 and you can use it twice, once it will convert to half capsule and another
    time to an empty one.
  - Return it to Oxygen compressor for later usage.
