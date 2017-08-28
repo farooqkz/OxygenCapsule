@@ -47,7 +47,6 @@ Oxygen Compressor:
  - Return it to Oxygen compressor for later usage.
 
 ## Licence
-Code: AGPL3 or later(which means this program is free software and you can
-modify/use/distribute while you keep it under the same licence)
+Code: ISC
 
-Textures: currently WTFPL
+Textures: currently CC0
