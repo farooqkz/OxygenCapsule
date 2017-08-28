@@ -15,7 +15,6 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
-local is_power_source_connected = true -- TODO: use mesecons
 local slots = {"slot1", "slot2", "slot3", "slot4"}
 local function init_oxygen_compressor(pos) 
     local meta = minetest.get_meta(pos)
@@ -24,17 +23,18 @@ local function init_oxygen_compressor(pos)
     end
     local inv = meta:get_inventory()
     meta:set_string("formspec",
-    "size[8,6]"..
-    "list[context;fuel;1,1;2,1]"..
-    "list[context;capsules;4,1;4,1]"..
-    "list[current_player;main;0,2;8,4]"
+    "size[8,7.5]"..
+    "list[context;fuel;2,1;1,1]"..
+    "list[context;capsules;5,.5;2,2]"..
+    "list[current_player;main;0,3.5;8,4]"
     )
     meta:set_string("infotext", "Oxygen Compressor")
     for i, v in ipairs(slots) do
         meta:set_int(v, 0)
     end
     inv:set_size("main", 8*4)
-    inv:set_size("capsules", 1*4)
+    inv:set_size("capsules", 2*2)
+    inv:set_size("fuel", 1*1)
 
     timer = minetest.get_node_timer(pos)
     if timer:is_started() then
@@ -43,7 +43,7 @@ local function init_oxygen_compressor(pos)
     timer:start(1.0)
 
     meta:set_string("init", "yes")
-    -- ^ we initialized this node's timer and metadata
+    -- ^ we have initialized this node's timer and metadata
 end
 minetest.register_node("oxygencapsule:oxygen_compressor", {
     description = "Oxygen Comressorr", 
@@ -53,7 +53,7 @@ minetest.register_node("oxygencapsule:oxygen_compressor", {
     can_dig = function(pos)
         local mymeta = minetest.get_meta(pos)
         local myinv = mymeta:get_inventory()
-        return myinv:is_empty("capsules")
+        return myinv:is_empty("capsules") and myinv:is_empty("fuel")
     end,
     on_construct = function(pos)
         init_oxygen_compressor(pos)
@@ -61,28 +61,39 @@ minetest.register_node("oxygencapsule:oxygen_compressor", {
     on_timer = function(pos, elapsed)
         local mymeta = minetest.get_meta(pos)
         local myinv = mymeta:get_inventory()
+        local fuelstack = myinv:get_stack("fuel", 1) 
+
+        if fuelstack:get_name() ~= "homedecor:oil_extract" then
+            return true 
+        end -- so it's not the fuel which we want
+
         for i, v in ipairs(slots) do 
-            local stack = myinv:get_stack("capsules", i)
+            local capstack = myinv:get_stack("capsules", i)
             local stat = mymeta:get_int(v)
-            local stackname = stack:get_name()
-            if stackname == "oxygencapsule:small_capsule_empty" or stackname ==
-                "oxygencapsule:small_capsule_half" then
+            local stackname = capstack:get_name()
+            empty_cap = "oxygencapsule:small_capsule_empty"
+            half_cap = "oxygencapsule:small_capsule_half"
+            full_cap = "oxygencapsule:small_capsule_full"
+
+            if stackname == empty_cap or stackname == half_cap and fuelstack:get_count() > 0 then
                 if stat == 10 then
-                    if stackname == "oxygencapsule:small_capsule_empty" then
-                        stack:replace("oxygencapsule:small_capsule_half")
+                    if stackname == empty_cap then
+                        capstack:replace(half_cap)
                     else
-                        stack:replace("oxygencapsule:small_capsule_full")
+                        capstack:replace(full_cap)
                     end
                     stat = 0
                 else
                     stat = stat + 1
                 end
+                fuelstack:set_count(fuelstack:get_count() - 1)
             else
                 stat = 0
             end
-            myinv:set_stack("capsules", i, stack)
+            myinv:set_stack("capsules", i, capstack)
             mymeta:set_int(v, stat)
         end
+        myinv:set_stack("fuel", 1, fuelstack)
         return true
     end
 })
