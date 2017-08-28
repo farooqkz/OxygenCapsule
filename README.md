@@ -3,7 +3,7 @@ Oxygen Capsule
 When you want to go diving underwater, use these capsules to increase your
 breath up to 10.
 This mod currently contains a small capsule(in three state: empty, half and
-full) and a Oxygen compressor. each full capsule can increase your breath to 10.
+full) and an Oxygen compressor. each full capsule can increase your breath to 10.
 
 I said *small* capsules because bigger ones would be added later(how about a big
 one attached to player?)
